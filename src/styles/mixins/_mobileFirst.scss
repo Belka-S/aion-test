@@ -1,0 +1,19 @@
+@import '../globals/breakpoints';
+
+@mixin mobile() {
+  @media (width >= $screen-s) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (width >= $screen-m) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (width >= $screen-l) {
+    @content;
+  }
+}
