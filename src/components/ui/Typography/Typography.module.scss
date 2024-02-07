@@ -1,0 +1,101 @@
+@import 'mixins';
+
+// title
+
+.h1 {
+  margin-bottom: var(--indent-m);
+  font-size: 26px;
+
+  @include tablet {
+    margin-bottom: var(--indent-l);
+    font-size: 32px;
+  }
+  @include desktop {
+    margin-bottom: var(--indent-xl);
+    font-size: 44px;
+  }
+}
+.h2 {
+  font-size: 24px;
+  margin-bottom: var(--indent-m);
+
+  @include tablet {
+    margin-bottom: var(--indent-l);
+    font-size: 30px;
+  }
+  @include desktop {
+    margin-bottom: var(--indent-xl);
+    font-size: 36px;
+  }
+}
+.h3 {
+  font-size: 20px;
+
+  @include tablet {
+    font-size: 26px;
+  }
+  @include desktop {
+    font-size: 30px;
+  }
+}
+.h4 {
+  font-size: 18px;
+
+  @include tablet {
+    font-size: 22px;
+  }
+  @include desktop {
+    font-size: 24px;
+  }
+}
+.h5 {
+  font-size: 18px;
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+.h6 {
+  font-size: 14px;
+
+  @include tablet {
+    font-size: 16px;
+  }
+}
+.p {
+  font-size: 14px;
+
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+// font-weight
+
+.thin {
+  font-weight: 100;
+}
+.extraLight {
+  font-weight: 200;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.semiBold {
+  font-weight: 600;
+}
+.bold {
+  font-weight: 700;
+}
+.extraBold {
+  font-weight: 800;
+}
+.black {
+  font-weight: 900;
+}

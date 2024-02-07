@@ -1,0 +1,15 @@
+.header {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 99;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__btn {
+  border-radius: 50%;
+}

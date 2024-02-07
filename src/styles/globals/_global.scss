@@ -8,19 +8,19 @@
 html,
 body {
   width: 100vw;
-  // height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
 }
 
+main {
+  flex-grow: 1;
+}
+
 .layout {
   display: flex;
   flex-direction: column;
-}
-
-main {
-  flex-grow: 1;
 }
 
 .container {
@@ -36,7 +36,8 @@ main {
     max-width: 768px;
   }
   @include desktop {
-    max-width: 1440px;
+    max-width: 100%;
+    padding-inline: 40px;
   }
 }
 

@@ -3,12 +3,12 @@ import H1 from '@/components/ui/Typography/H1';
 
 import s from './index.module.scss';
 
-const HomePage = () => {
+const AboutPage = () => {
   return (
-    <Section className={s.home}>
-      <H1>HomePage</H1>
+    <Section className={s.about}>
+      <H1>AboutPage</H1>
     </Section>
   );
 };
 
-export default HomePage;
+export default AboutPage;

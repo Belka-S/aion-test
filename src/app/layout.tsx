@@ -5,8 +5,8 @@ import type { Metadata } from 'next';
 import { Raleway, Roboto } from 'next/font/google';
 import { ReactNode } from 'react';
 
-// import Footer from '@/layouts/Footer';
-// import Header from '@/layouts/Header';
+import Footer from '@/layouts/Footer';
+import Header from '@/layouts/Header';
 
 export const metadata: Metadata = {
   title: 'NextStarter',
@@ -31,9 +31,9 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
       <body className={classNames('layout', roboto.variable, raleway.variable)}>
-        {/* <Header /> */}
+        <Header />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
