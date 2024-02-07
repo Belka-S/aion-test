@@ -2,7 +2,7 @@
 
 import classNames from 'classnames';
 import Link from 'next/link';
-import { useState } from 'react';
+import { MouseEvent, useState } from 'react';
 
 import Logo from '@/components/Logo';
 import Button from '@/components/ui/Button';
@@ -14,6 +14,11 @@ import Menu from './Menu';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+    setIsOpen(!isOpen);
+    e.currentTarget.blur();
+  };
+
   return (
     <>
       <header className={s.header}>
@@ -24,7 +29,7 @@ const Header = () => {
           {/* <SiteNav /> */}
           <Button
             className={s.header__btn}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={handleClick}
             type="button"
             variant="outlined"
             label="X"
