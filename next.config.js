@@ -4,8 +4,7 @@ const path = require('path');
 
 const nextConfig = {
   images: {
-    reactStrictMode: true,
-    basePath: '/github-pages',
+    output: 'export',
     unoptimized: false,
     // domains: [ 'images.unsplash.com', 'res.cloudinary.com', 'img.etimg.com', 'assets.vogue.com', 'm.media-amazon.com', 'upload.wikimedia.org', ],
 
