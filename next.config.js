@@ -3,9 +3,7 @@
 const path = require('path');
 
 const nextConfig = {
-  // output: 'export',
-  reactStrictMode: true,
-  basePath: '/github-pages',
+  output: 'export',
 
   images: {
     unoptimized: false,
