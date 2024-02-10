@@ -27,7 +27,7 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'src/styles')],
   },
 
-  // reactStrictMode: false,
+  reactStrictMode: false,
 };
 
 module.exports = nextConfig;
