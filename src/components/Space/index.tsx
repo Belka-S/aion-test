@@ -114,7 +114,7 @@ const Cube = (props: JSX.IntrinsicElements['mesh']) => {
     <mesh
       {...props}
       ref={meshRef}
-      scale={active ? 2 : 1}
+      scale={active ? 1.5 : 1}
       onClick={event => setActive(!active)}
       onPointerOver={event => setHover(true)}
       onPointerOut={event => setHover(false)}
@@ -128,20 +128,22 @@ const Cube = (props: JSX.IntrinsicElements['mesh']) => {
 // Space
 const Space = () => {
   return (
-    <Canvas className={s.space}>
-      <ambientLight intensity={Math.PI / 2} />
-      <spotLight
-        position={[10, 10, 10]}
-        angle={0.15}
-        penumbra={1}
-        decay={0}
-        intensity={Math.PI}
-      />
-      <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
-      <Cube position={[-5, 0, 0]} />
-      <Cube position={[5, 0, 0]} />
-      <Galaxy />
-    </Canvas>
+    <>
+      <Canvas className={s.space}>
+        <ambientLight intensity={Math.PI / 2} />
+        <spotLight
+          position={[10, 10, 10]}
+          angle={0.15}
+          penumbra={1}
+          decay={0}
+          intensity={Math.PI}
+        />
+        <pointLight position={[-5, -5, -5]} decay={0} intensity={Math.PI} />
+        <Cube position={[-5, 0, 0]} />
+        <Cube position={[5, 0, 0]} />
+        <Galaxy />
+      </Canvas>
+    </>
   );
 };
 
