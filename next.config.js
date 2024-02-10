@@ -5,7 +5,7 @@ const path = require('path');
 const nextConfig = {
   images: {
     output: 'export',
-    unoptimized: false,
+    // unoptimized: false,
     // domains: [ 'images.unsplash.com', 'res.cloudinary.com', 'img.etimg.com', 'assets.vogue.com', 'm.media-amazon.com', 'upload.wikimedia.org', ],
 
     deviceSizes: [320, 480, 768, 1080, 1200, 1440, 1920, 2048, 3840],
