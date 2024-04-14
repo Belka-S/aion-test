@@ -33,7 +33,7 @@ const Header = () => {
             onClick={handleClick}
             type="button"
             variant="outlined"
-            label="Get some space"
+            label="Get Some Space"
           />
         </div>
       </header>
