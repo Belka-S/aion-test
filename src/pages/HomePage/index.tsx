@@ -6,7 +6,7 @@ import s from './index.module.scss';
 const HomePage = () => {
   return (
     <Section className={s.home}>
-      <H1>HomePage</H1>
+      <H1>Home Page</H1>
     </Section>
   );
 };

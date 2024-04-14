@@ -6,7 +6,7 @@ import s from './index.module.scss';
 const ContactPage = () => {
   return (
     <Section className={s.contact}>
-      <H1>ContactPage</H1>
+      <H1>Contact Page</H1>
     </Section>
   );
 };
