@@ -1,7 +1,7 @@
-import HomePage from '@/pages/HomePage';
+import GalaxyPage from '@/pages/GalaxyPage';
 
-const Home = () => {
- return <HomePage />;
+const Galaxy = () => {
+  return <GalaxyPage />;
 };
 
-export default Home;
+export default Galaxy;

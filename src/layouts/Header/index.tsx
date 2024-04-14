@@ -1,17 +1,18 @@
 'use client';
 
 import classNames from 'classnames';
-import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { MouseEvent, useState } from 'react';
 
-import Logo from '@/components/Logo';
 import Button from '@/components/ui/Button';
+import H4 from '@/components/ui/Typography/H4';
 
+import Menu from '../../components/Menu';
 import s from './Header.module.scss';
-import Menu from './Menu';
-// import SiteNav from './SiteNav';
+import SiteNav from './SiteNav';
 
 const Header = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -23,21 +24,23 @@ const Header = () => {
     <>
       <header className={s.header}>
         <div className={classNames('container', s.header__wrap)}>
-          <Link href={'/'} onClick={() => setIsOpen(false)}>
-            <Logo />
-          </Link>
-          {/* <SiteNav /> */}
+          <H4 className={s.header__title}>
+            {pathname === '/' ? 'galaxy' : `${pathname?.replace('/', '')}`}
+          </H4>
+
           <Button
             className={s.header__btn}
             onClick={handleClick}
             type="button"
             variant="outlined"
-            label="X"
+            label="Get some space"
           />
         </div>
       </header>
 
-      <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Menu isOpen={isOpen} setIsOpen={setIsOpen}>
+        <SiteNav className={s.menu__nav} />
+      </Menu>
     </>
   );
 };

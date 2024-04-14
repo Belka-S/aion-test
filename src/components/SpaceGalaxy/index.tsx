@@ -59,7 +59,7 @@ const Galaxy = (props: JSX.IntrinsicElements['group']) => {
 
     return [positions, colors];
   }, [nodes]);
-  const starTexture = useLoader(THREE.TextureLoader, './star.jpg');
+  // const starTexture = useLoader(THREE.TextureLoader, './star.jpg');
 
   // slowly rotate the galaxy
   useFrame((state, delta) => {
@@ -76,7 +76,7 @@ const Galaxy = (props: JSX.IntrinsicElements['group']) => {
       />
       <Points scale={0.05} positions={positions} colors={colors}>
         <pointsMaterial
-          map={starTexture}
+          // map={starTexture}
           transparent
           depthWrite={false}
           vertexColors
@@ -114,37 +114,37 @@ const Cube = (props: JSX.IntrinsicElements['mesh']) => {
     <mesh
       {...props}
       ref={meshRef}
-      scale={active ? 1.5 : 1}
+      scale={active ? 2 : 1}
       onClick={event => setActive(!active)}
       onPointerOver={event => setHover(true)}
       onPointerOut={event => setHover(false)}
     >
-      <boxGeometry args={[0.5, 0.5, 0.5]} />
+      <boxGeometry args={[0.4, 0.4, 0.4]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   );
 };
 
-// Space
-const Space = () => {
+// Space Galaxy
+const SpaceGalaxy = () => {
   return (
-    <>
-      <Canvas className={s.space}>
-        <ambientLight intensity={Math.PI / 2} />
-        <spotLight
-          position={[10, 10, 10]}
-          angle={0.15}
-          penumbra={1}
-          decay={0}
-          intensity={Math.PI}
-        />
-        <pointLight position={[-5, -5, -5]} decay={0} intensity={Math.PI} />
-        <Cube position={[-5, 0, 0]} />
-        <Cube position={[5, 0, 0]} />
-        <Galaxy />
-      </Canvas>
-    </>
+    <Canvas className={s.space}>
+      <ambientLight intensity={Math.PI / 2} />
+      <spotLight
+        position={[10, 10, 10]}
+        angle={0.15}
+        penumbra={1}
+        decay={0}
+        intensity={Math.PI}
+      />
+      <pointLight position={[-5, -5, -5]} decay={0} intensity={Math.PI} />
+      <Cube position={[-6, -3, 0]} />
+      <Cube position={[6, -3, 0]} />
+      <Cube position={[-6, 2.5, 0]} />
+      <Cube position={[6, 2.5, 0]} />
+      <Galaxy />
+    </Canvas>
   );
 };
 
-export default Space;
+export default SpaceGalaxy;
